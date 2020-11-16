@@ -174,8 +174,45 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
+// > .6666 = rock
+// > .3333 = paper
+// else = scissors
+
+let computer = (Math.random);
 function game(user, computer){
-    /*add your code here*/
+    if (computer > .6666){
+      if(user >.6666){
+        return "it's a tie"
+      }
+      else if (user > .3333){
+        return "you win!"
+      }
+      else{
+        return "you lose!"
+      }
+    }
+    else if (computer > .3333){
+      if(user >.6666){
+        return "you lose!"
+      }
+      else if (user > .3333){
+        return "it's a tie"
+      }
+      else{
+        return "you win!"
+      }
+    }
+    else{
+      if(user >.6666){
+        return "you win!"
+      }
+      else if (user > .3333){
+        return "you lose!"
+      }
+      else{
+        return "it's a tie"
+      }
+    }
 }
   
   
