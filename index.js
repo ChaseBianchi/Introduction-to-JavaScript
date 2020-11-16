@@ -1,5 +1,7 @@
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
+import { createConfigItem } from "@babel/core";
+
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
 /*
@@ -17,7 +19,13 @@ Do the following:
 
    HINT: no function required
 */
-
+var votingAge = 15;
+if (votingAge >= 18){
+  console.log(true)
+}
+else {
+  console.log(false)
+}
 
 
 /*
@@ -30,7 +38,15 @@ Do the following:
 
    HINT: no function required
 */
-
+let num1 = 5;
+let num2 = 2;
+if (num1 === 5){
+   num1 += num2;
+  console.log(num1);
+}
+else {
+  console.log("no change")
+}
 
 
 
@@ -45,7 +61,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let string = "1999";
+let integer = parseInt(string, 10);
+console.log(integer);
 
 
 
@@ -58,8 +76,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
 
 
@@ -74,8 +92,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
 
 
@@ -107,9 +125,33 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    if(age >= 1){
+      if(weight > 15){
+        return (weight * .02);
+      }
+      else if(weight >= 11){
+        return (weight * .03);
+      }
+      else if(weight >= 6){
+        return (weight * .04);
+      }
+      else{
+        return (weight * .05);
+      }
+    }
+  else{
+    if (age <= .3333){
+      return (weight * .1);
+    }
+    else if(age <= .5833){
+      return (weight * .05);
+    }
+    else{w
+      return (weight * .04);
+    }
   }
+}
 
 
 
@@ -132,9 +174,74 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
+// > .6666 = rock
+// > .3333 = paper
+// else = scissors
+
+let computer1 = (Math.random);
 function game(user, computer){
-    /*add your code here*/
-}
+    if (user === computer){
+      return "it's a tie"
+    }
+    if (user === "rock"){
+      if (computer === "scissors"){
+        return "you win!"
+      }
+      else{
+        return "you lose!"
+      }
+    }
+    else if (user === "paper"){
+      if (computer === "rock"){
+        return "you win!"
+      }
+      else{
+        return "you lose!"
+      }
+    }
+    else{
+      if (computer === "paper"){
+        return "you win!"
+      }
+      else {
+        return "you lose!"
+      }
+    }
+
+//     if (computer > .6666){
+//       if(user >.6666){
+//         return "it's a tie"
+//       }
+//       else if (user > .3333){
+//         return "you win!"
+//       }
+//       else{
+//         return "you lose!"
+//       }
+//     }
+//     else if (computer > .3333){
+//       if(user >.6666){
+//         return "you lose!"
+//       }
+//       else if (user > .3333){
+//         return "it's a tie"
+//       }
+//       else{
+//         return "you win!"
+//       }
+//     }
+//     else{
+//       if(user >.6666){
+//         return "you win!"
+//       }
+//       else if (user > .3333){
+//         return "you lose!"
+//       }
+//       else{
+//         return "it's a tie"
+//       }
+//     }
+ }
   
   
 
@@ -149,8 +256,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    kilometers *= 0.621371;
+    return kilometers;
   }
 
 
@@ -163,8 +271,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    cm /= 30.48;
+    return cm;
   }
  
 
@@ -179,8 +288,10 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+        for (let i=number; i >= 1; i--){
+          return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`
+        }
   }
 
 
@@ -199,8 +310,22 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(grade){
+    if (grade >= 90){
+      return "you got a A"
+    }
+    else if (grade >= 80){
+      return "you got a B"
+    }
+    else if (grade >= 70){
+      return "you got a C"
+    }
+    else if(grade >= 60){
+      return "you got a D"
+    }
+    else{
+      return "you got a F"
+    }
   }
   
   
