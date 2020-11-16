@@ -178,42 +178,70 @@ Use the game function below to do the following:
 // > .3333 = paper
 // else = scissors
 
-let computer = (Math.random);
+let computer1 = (Math.random);
 function game(user, computer){
-    if (computer > .6666){
-      if(user >.6666){
-        return "it's a tie"
-      }
-      else if (user > .3333){
+    if (user === computer){
+      return "it's a tie"
+    }
+    if (user === "rock"){
+      if (computer === "scissors"){
         return "you win!"
       }
       else{
         return "you lose!"
       }
     }
-    else if (computer > .3333){
-      if(user >.6666){
-        return "you lose!"
-      }
-      else if (user > .3333){
-        return "it's a tie"
+    else if (user === "paper"){
+      if (computer === "rock"){
+        return "you win!"
       }
       else{
-        return "you win!"
+        return "you lose!"
       }
     }
     else{
-      if(user >.6666){
+      if (computer === "paper"){
         return "you win!"
       }
-      else if (user > .3333){
+      else {
         return "you lose!"
       }
-      else{
-        return "it's a tie"
-      }
     }
-}
+
+//     if (computer > .6666){
+//       if(user >.6666){
+//         return "it's a tie"
+//       }
+//       else if (user > .3333){
+//         return "you win!"
+//       }
+//       else{
+//         return "you lose!"
+//       }
+//     }
+//     else if (computer > .3333){
+//       if(user >.6666){
+//         return "you lose!"
+//       }
+//       else if (user > .3333){
+//         return "it's a tie"
+//       }
+//       else{
+//         return "you win!"
+//       }
+//     }
+//     else{
+//       if(user >.6666){
+//         return "you win!"
+//       }
+//       else if (user > .3333){
+//         return "you lose!"
+//       }
+//       else{
+//         return "it's a tie"
+//       }
+//     }
+ }
   
   
 
@@ -261,7 +289,9 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(number){
-        
+        for (let i=number; i >= 1; i--){
+          return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`
+        }
   }
 
 
@@ -280,8 +310,22 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(grade){
+    if (grade >= 90){
+      return "you got a A"
+    }
+    else if (grade >= 80){
+      return "you got a B"
+    }
+    else if (grade >= 70){
+      return "you got a C"
+    }
+    else if(grade >= 60){
+      return "you got a D"
+    }
+    else{
+      return "you got a F"
+    }
   }
   
   
