@@ -136,7 +136,7 @@ function hungryDog(weight, age){
       if(age<=1/3){
         return weight*.1;
       }
-      else if(age<.583){
+      else if(age<7/12){
         return weight*.05;
       }
       else{
@@ -165,10 +165,36 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+var choice=Math.random();
 function game(user, computer){
-    /*add your code here*/
-}
+    if(user===computer){
+      return "it's a tie"
+    }
+    else if(user==='rock'){
+      if(computer==='paper'){
+        return "you lose!"
+      }
+      else{
+        return "you win!"
+      }
+    }
+    else if(user==='paper'){
+      if(computer==='rock'){
+        return "you win!"
+      }
+      else{
+        return "you lose!"
+      }
+    }
+    else{
+      if(computer==='paper'){
+        return 'you win!'
+      }
+      else{
+        return 'you lose!'
+      }
+    }
+  }    
   
   
 
