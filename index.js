@@ -15,6 +15,13 @@ Do the following:
    2. Return true if age is 18 or higher
    HINT: no function required
 */
+let votingAge = 17;
+if(votingAge >= 18){
+  console.log(true);
+}
+else{
+  console.log(false);
+}
 
 
 
@@ -26,7 +33,15 @@ Do the following:
    3. Return the new value of the 1st variable
    HINT: no function required
 */
-
+let num1=4;
+let num2=3;
+if (num1===4){
+  num1+=num2;
+  console.log(num1);
+}
+else{
+  console.log('unchanged');
+}
 
 
 
@@ -39,6 +54,9 @@ Do the following:
    3. Return the result
    HINT: look up the Number method
 */
+let string='1999';
+let convert=parseInt(string);
+console.log(convert);
 
 
 
@@ -68,8 +86,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+  return age*7;
 }
 
 
@@ -99,8 +117,24 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    if(age>=1){
+      if(weight<=5){
+        return weight*.05;
+      }
+      else if(weight<=10){
+        return weight*.04;
+      }
+      else{
+        return weight*.02;
+      }
+    }
+    else{
+      if(age<=.333){
+        return weight*.1;
+      }
+      else if(age<)
+    }
   }
 
 
