@@ -279,7 +279,7 @@ function grade(grade){
 }
 
   
-  console.log('grade function', grade(85));
+  console.log('grade function', grade(100));
   
   
 
@@ -295,8 +295,15 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(string) {
+    let vowels = 'aeiouAEIOU';
+    let currentResult=0;
+    for(i=0;i<string.length;i++){
+      if(vowels.indexOf(string[i]) !== -1){
+        currentResult += 1;
+      }
+    }
+    return currentResult;
 }
 
 
